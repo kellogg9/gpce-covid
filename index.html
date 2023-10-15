@@ -75,6 +75,30 @@
             margin-top: 40px;
         }
 
+        /* Collaborators section styles */
+        .collaborator {
+            width: 23%; /* Adjust for 4 per line */
+            padding-top: 23%; /* Maintain aspect ratio */
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 1%;
+            position: relative;
+        }
+
+        .collaborators-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .collaborator img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
