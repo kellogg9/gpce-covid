@@ -83,12 +83,35 @@
             overflow: hidden;
             margin: 1%;
             position: relative;
+            transition: box-shadow 0.3s; /* Smooth transition for the shadow */
+        }
+
+        .collaborator:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow effect */
+        }
+        
+        .collaborator-name {
+            position: absolute;
+            bottom: 10%; /* Position the name near the bottom */
+            left: 50%;
+            transform: translateX(-50%); /* Center the name horizontally */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 5px 10px;
+            border-radius: 10px;
+            visibility: hidden; /* Initially hidden */
+            transition: visibility 0.3s, opacity 0.3s linear; /* Smooth transition for visibility and opacity */
+        }
+
+        .collaborator:hover .collaborator-name {
+            visibility: visible;
+            opacity: 1; /* Show the name on hover */
         }
 
         .collaborators-row {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            padding-bottom: 40px;
         }
 
         .collaborator img {
@@ -151,6 +174,7 @@
             <div class="collaborators-row">
                 <div class="collaborator">
                     <img src="./pics/img/Nicholas Kellogg.png" alt="Nicholas Kellogg">
+                    <div class="collaborator-name">Nicholas Kellogg</div>
                 </div>
                 <div class="collaborator">
                     <img src="./pics/img/1594479822284 - George Boulos.jpg" alt="George Boulos">
