@@ -84,14 +84,27 @@
 
         /* Collaborators section styles */
         .collaborator {
-            width: 20%; /* Adjust for 4 per line */
-            padding-top: 20%; /* Adjusted to maintain aspect ratio */
+            width: 30%; /* Adjust for 3 per line */
+            padding-top: 30%; /* Adjusted to maintain aspect ratio */
             border-radius: 50%;
             overflow: hidden;
-            margin: 2%; /* Increased margin for more space */
+            margin: 2%; /* Adjusted margin for more space */
             position: relative;
-            transition: box-shadow 0.3s; /* Smooth transition for the shadow */
+            transition: box-shadow 0.3s; 
+            background-color: #eaeaea; /* Default grey banner */
         }
+
+        .collaborator:nth-child(3n+1) {
+            clear: both; /* Ensure every 3rd collaborator starts on a new line */
+        }
+
+       
+        .collaborator:nth-child(6n+1),
+        .collaborator:nth-child(6n+2),
+        .collaborator:nth-child(6n+3) {
+            background-color: #d6d6d6; /* Different shade for alternating rows */
+        }
+
 
 
         .collaborator:hover {
