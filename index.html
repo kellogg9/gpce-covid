@@ -201,11 +201,30 @@
             .navbar-links a:hover::after {
                 transform: scaleX(1);
             }
+
+            /* Hero Section */
+            #hero {
+                background-image: url(./pics/img/covidthing.jpg);
+                background-size: cover;
+                background-position: top center;
+                position: relative;
+                z-index: 1;
+            }
+
+            #hero .container {
+                min-height: 90vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
         </style>
 </head>
 <body>
     <div class="navbar">
-        <div class="navbar-title">Interpretable AI for Time-Series Models</div>
+        <!-- <div class="navbar-title">Interpretable AI for Time-Series Models</div> -->
+        <div class="logo">
+            <img src="./pics/img/UVAdatascience.png" alt="Data Science Logo">
+        </div>
         <div class="navbar-links">
             <a href="#projects">Projects</a>
             <a href="#videos">Videos</a>
@@ -215,6 +234,11 @@
         </div>
     </div>
     
+    <section id="hero">
+        <div class="container">
+            <h1>Interpretable AI for Time-Series Models</h1>
+        </div>
+    </section>
     
     <div class="container">
         <h1 id="title">Interpretable AI for Time-Series Models</h1>
