@@ -161,13 +161,18 @@
                 padding: 0 10px; 
                 padding-right: 50px;
                 box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* shadow for navbar */
-                align-items: center; /* added to vertically center the logo and links */
+                align-items: center; 
+            }
+
+            .logo {
+                padding-right: 15px; 
             }
 
             .logo img {
-                width: 50px;  /* set a fixed width */
-                height: 50px; /* set a fixed height */
-                object-fit: cover; /* keeps the image's aspect ratio while covering the div */
+                width: 120px;  
+                height: auto;  
+                display: block;
+                margin: 5px 0;
             }
 
             .navbar-title {
@@ -209,21 +214,32 @@
                 transform: scaleX(1);
             }
 
-            /* Hero Section */
-            #hero {
-                background-image: url(./pics/img/covidthing.jpg);
-                background-size: cover;
-                background-position: top center;
-                position: relative;
-                z-index: 1;
-            }
+                    /* Hero Section */
+        #hero {
+            background-image: url(./pics/img/covidthing.jpg);
+            background-size: contain;  /* changed to contain to fit within the container */
+            background-repeat: no-repeat;  /* prevent repeating of the image */
+            background-position: center;  /* center the image */
+            position: relative;
+            z-index: 1;
+            padding: 60px 0;  /* added padding to give space on top and bottom */
+        }
 
-            #hero .container {
-                min-height: 90vh;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
+        #hero .container {
+            min-height: 90vh;  /* adjusted to take at least 90% of the viewport height */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;  /* center the text */
+        }
+
+        #hero h1 {
+            color: white;  /* make the text white */
+            background-color: transparent;  /* remove any background */
+            padding: 0;  /* remove any padding */
+            margin: 0;  /* remove any margin */
+            font-size: 3rem;  /* adjust the font size if needed */
+        }
         </style>
 </head>
 <body>
