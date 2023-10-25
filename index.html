@@ -165,14 +165,16 @@
             }
 
             .logo {
+                width: 100px;
+                display: inline-flex;
                 padding-right: 15px; 
             }
 
             .logo img {
-                width: 120px;  
-                height: auto;  
-                display: block;
-                margin: 5px 0;
+                margin: auto 5px;
+                float: right;
+                width: 300px;
+                height: 50px;
             }
 
             .navbar-title {
@@ -214,33 +216,77 @@
                 transform: scaleX(1);
             }
 
-                    /* Hero Section */
-        #hero {
-            background-image: url(./pics/img/covidthing.jpg);
-            background-size: contain;  /* changed to contain to fit within the container */
-            background-repeat: no-repeat;  /* prevent repeating of the image */
-            background-position: center;  /* center the image */
-            position: relative;
-            z-index: 1;
-            padding: 60px 0;  /* added padding to give space on top and bottom */
-        }
+            /* Hero Section */
+            #hero {
+                background-image: url(./pics/img/covidthing.jpg);
+                background-size: cover;
+                background-position: top center;
+                position: relative;
+                z-index: 1;
+            }
 
-        #hero .container {
-            min-height: 90vh;  /* adjusted to take at least 90% of the viewport height */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;  /* center the text */
-        }
+            #hero .container {
+                min-height: 90vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
 
-        #hero h1 {
-            color: white;  /* make the text white */
-            background-color: transparent;  /* remove any background */
-            padding: 0;  /* remove any padding */
-            margin: 0;  /* remove any margin */
-            font-size: 3rem;  /* adjust the font size if needed */
-        }
-        </style>
+            #hero::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background-color: black;
+                opacity: .50;
+                z-index: -1;
+            }
+
+            #hero h1 {
+                display: inline;
+                width: fit-content;
+                font-size: 4rem;
+                position: relative;
+                color: transparent;
+                animation: text_reveal .5s ease forwards;
+                animation-delay: 1s;
+                font-family: 'Inconsolata', sans-serif;
+                padding-left: 30px;
+            }
+
+            #hero h1 span {
+                position: relative;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 0;
+                background-color: brown;
+                animation: text_reveal_box 1s ease;
+                animation-delay: 1s;
+            }
+
+            #hero .cta {
+                display: inline-block;
+                padding: 20px 100px;
+                color: white;
+                background-color: transparent;
+                border: 2px solid lightslategray;
+                font-size: 2rem;
+                text-transform: uppercase;
+                letter-spacing: .1rem;
+                margin-top: 300px;
+                transition: .3s ease;
+                transition-property: background-color, color;
+            }
+
+            #hero .cta:hover {
+                color: white;
+                background-color: lightslategrey;
+            }
+    </style>
 </head>
 <body>
     <div class="navbar">
